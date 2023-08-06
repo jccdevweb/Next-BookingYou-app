@@ -1,34 +1,18 @@
-import { Nunito } from "next/font/google";
-import './globals.css';
-import Navbar from './components/navbar/Navbar';
-import ClientOnly from "./components/ClientOnly";
-import RegisterModal from "./components/modals/RegisterModal";
-import ToasterProvider from "./providers/ToasterProvider";
+import "./globals.css";
 
 export const metadata = {
-  title: 'Booking PH',
-  description: 'PH Booking V1',
-}
-
-const font = Nunito({
-  subsets:["latin"],
-})
+  title: "Booking App",
+  description: "Happy Vacation",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>
-       <ClientOnly>
-        <ToasterProvider />
-        <RegisterModal />
-          <Navbar />
-       </ClientOnly> 
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }

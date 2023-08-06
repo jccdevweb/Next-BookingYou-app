@@ -1,6 +1,3 @@
-
 export default function Home() {
-  return (
-   <div className="text-rose-500 text-4xl">Booking</div>
-  )
+  return <div>Booking App</div>;
 }
