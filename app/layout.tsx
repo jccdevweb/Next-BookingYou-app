@@ -1,9 +1,15 @@
+import { Roboto } from "next/font/google";
+
 import "./globals.css";
 
 export const metadata = {
   title: "Booking App",
   description: "Happy Vacation",
 };
+const font = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -12,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
