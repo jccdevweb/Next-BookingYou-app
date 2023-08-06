@@ -1,3 +1,4 @@
+import Container from "../Cointainer";
 import React from "react";
 
 const Navbar = () => {
@@ -8,7 +9,20 @@ const Navbar = () => {
           py-4
           border-b-[1px]
           "
-      ></div>
+      >
+        <Container>
+          <div
+            className="
+              flex 
+              flex-row 
+              items-center 
+              justify-between 
+              gap-3 
+              md:gap-0  
+            "
+          ></div>
+        </Container>
+      </div>
     </div>
   );
 };
